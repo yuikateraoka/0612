@@ -1,35 +1,26 @@
 package Main;
-
+import Calculation.CalFee;
+import java.util.Scanner;
 
 /**
- * 여기에 MyApp 클래스 설명을 작성하십시오.
+ * MyApp 클래스 
  * 
- * @author (작성자 이름) 
- * @version (버전번호나 날짜)
+ * @author (2020.06.12) 
+ * @version (2014671308 김진수 , 2018315030 이가영,20183150 테라오카 유이카)
  */
 public class MyApp
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 바꾸십시오
-    private int x;
-
-    /**
-     * MyApp 클래스의 객체 생성자
-     */
-    public MyApp()
-    {
-        // 인스턴스 변수의 초기화
-        x = 0;
-    }
-
-    /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     * 
-     * @param  y   메소드의 예제 매개변수
-     * @return     x 더하기 y 
-     */
-    public int sampleMethod(int y)
-    {
-        // 여기에 코드를 작성하십시오.
-        return x + y;
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("나이를 입력하세요 : ");
+        int age = sc.nextInt();
+        System.out.print("신작인지 구작인지 입력해주세요(true,false) : ");
+        boolean old  = sc.nextBoolean();
+        System.out.print("요금을 입력 하세요 :");
+        int cost = sc.nextInt();
+        
+        CalFee calfee = new CalFee();
+        System.out.println("DVD요금은 : " + calfee.Cal(age,old,cost));
     }
 }
