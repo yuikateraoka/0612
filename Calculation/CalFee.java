@@ -1,3 +1,5 @@
+package Calculation;
+
 /**
  * 렌탈 DVD 할인요금계산 소프트웨어
  * 
